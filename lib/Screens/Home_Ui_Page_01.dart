@@ -109,7 +109,7 @@ class Home extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Consumer<DataProvider>(builder: (context,provider,child){
-                       return Text(provider.Hight.toString(),
+                       return Text(provider.Height.toString(),
                         style: const TextStyle(
                         color: Colors.white,
                         fontSize: 30,
@@ -133,11 +133,11 @@ class Home extends StatelessWidget {
                     return Slider(
                       activeColor: Color(0xFFca1b53),
                       inactiveColor: Colors.white,
-                      value: provider.Hight.toDouble(),
+                      value: provider.Height.toDouble(),
                       min: provider.kminSliderHight,
                       max: provider.kmaxSliderHight,
                       onChanged: (double value){
-                        provider.setHight(value.round());
+                        provider.setHeight(value.round());
                       },
                     );
                   }

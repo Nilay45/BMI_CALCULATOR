@@ -3,11 +3,8 @@ import 'package:bmi_calculator/Provider/data.dart';
 import 'package:provider/provider.dart';
 
 class page_02 extends StatelessWidget {
-  page_02({Key? key}) : super(key: key);
+  const page_02({Key? key}) : super(key: key);
 
-  String BMI_Value = "18.5";
-  String Intro = "Normal";
-  String MSG = "You have perfect BMI !";
 
   @override
   Widget build(BuildContext context) {
@@ -43,21 +40,21 @@ class page_02 extends StatelessWidget {
                   return Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text(Intro,
+                      Text(provider.intro().toString(),
                         style: const TextStyle(
                           color: Color(0xFF2323336),
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Text(provider.calculateBMI().toInt().toString(),
+                      Text(provider.calculateBMI().toString(),
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 90,
                           fontWeight: FontWeight.bold
                         ),
                       ),
-                      Text(MSG,
+                      Text(provider.msg().toString(),
                         style: const TextStyle(
                           color: Colors.white,
                           fontSize: 25,
